@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box n Box</title>
+<style>
+    
+
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    body{
+        background-color: black;
+       
+     
+      
+       
+    }
+    .container{
+   
+        display: flex;
+      /*   margin-left:10%;
+        margin-right:10%; */
+        position: relative;
+        border:10px solid red;
+        margin-left: 25px;
+        
+
+        
+    }
+
+    .flex-container1{
+        flex-direction: column;
+        position: relative;
+
+       
+
+    }
+
+    .long{
+        margin: 5px;
+        background-color: white;
+        width: 320px;
+        height: 655px;
+    }
+    .wall{
+        margin: 5px;
+        
+        width: 320px;
+        height: 655px;
+    }
+
+    .short{
+        margin: 5px;
+        /*background-color: ;*/
+        width: 310px;
+        height: 135px;
+        padding-top: 20px;
+        
+    }
+
+    
+
+    .med{
+        margin: 5px;
+        background-color: lightgoldenrodyellow;
+        width: 326px;
+        height: 329px;
+    }
+    .normal{
+        margin: 5px;
+        background-color: lightblue;
+        width: 326px;
+        height: 490px;
+    }
+    .img1{
+        width: 320px;
+        height: 660px;
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        
+    }
+
+    .img2{
+        width: 326px;
+        height: 495px;
+    }
+    .img3{
+        width: 326px;
+        height: 329px;
+    }
+
+    .wallPic{
+        width: auto;
+        height: 830px;
+        position: absolute;
+    
+    }
+
+    .logo{
+        width: 380;
+        height: 140px;
+        margin-left: 10px;
+        
+    }
+
+    .sad{
+        width: 300px;
+        height: 170px;
+    }
+    /* First image opacity */
+    .middle {
+        transition: .9s ease;
+        opacity: 0;
+        position: absolute;
+        width: 320px;
+        height: 829px;
+    
+        top: 50%;
+        margin-left: 160px;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        
+    }
+    .img1:hover{
+    opacity: 0.3;
+    }
+
+    .long:hover .middle {
+    opacity: 1;
+}
+
+    .long:hover .img1{
+        opacity: 0.3;
+    }
+
+.text {
+  background-color: skyblue;
+  height: 627px;
+  width: 200px;
+  color: white;
+  font-size: 24px;
+  padding: 16px 60px;
+}
+    /* second image opactity */
+.middle2 {
+        transition: .9s ease;
+        opacity: 0;
+        position: absolute;
+        width: 320px;
+        
+        top: 20.5%;
+        left: 49.6%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        
+    }
+    .img3:hover{
+    opacity: 0.3;
+    }
+
+    .med:hover .middle2 {
+    opacity: 1;
+}
+    .med:hover .img3{
+        opacity: 0.3;
+    }
+
+.text2 {
+  background-color: #feef86;
+  height: 294px;
+  width: 285px;
+  color: black;
+  font-size: 20px;
+  padding: 16px 19px
+}
+    /* third image opacity */
+
+    .middle3 {
+        transition: .9s ease;
+        opacity: 0;
+        position: absolute;
+        width: 320px;
+        top: 20.5%;
+        left: 49.6%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        
+    }
+    .img3:hover{
+    opacity: 0.3;
+    }
+
+    .med:hover .middle3 {
+    opacity: 1;
+}
+    .med:hover .img3{
+        opacity: 0.3;
+    }
+
+.text3 {
+  background-color: #feef86;
+  height: 294px;
+  width: 285px;
+  color: black;
+  font-size: 20px;
+  padding: 16px 19px
+}
+
+        /* fourth image opacity */
+
+        .middle4 {
+        transition: .9s ease;
+        opacity: 0;
+        position: absolute;
+        width: 320px;
+    
+        top: 70%;
+        margin-left: 160px;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        
+    }
+    .img3:hover{
+    opacity: 0.3;
+    }
+
+    .med:hover .middle4 {
+    opacity: 1;
+}
+    .med:hover .img3{
+        opacity: 0.3;
+    }
+
+.text4 {
+  background-color: black;
+  color: white;
+  width: 288px;
+  height: 460px;
+  font-size: 24px;
+  padding: 16px 19px
+}
+
+    /* Fith image opacity */
+
+    .middle5 {
+        transition: .9s ease;
+        opacity: 0;
+        position: absolute;
+        width: 320px;
+    
+        top: 70%;
+        left: 49%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        
+    }
+    .img2:hover{
+    opacity: 0.3;
+    }
+
+    .normal:hover .middle5 {
+    opacity: 1;
+}
+    .normal:hover .img2{
+        opacity: 0.3;
+    }
+
+.text5 {
+  background-color: skyblue;
+  color: white;
+  width: 288px;
+  height: 460px;
+  font-size: 24px;
+  padding: 16px 19px
+}
+
+    /* Final Image opacity */
+
+    .middle6 {
+        transition: .9s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        width: 287px;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        
+    }
+    .wallPic:hover{
+    opacity: 0.3;
+    }
+
+    .wall:hover .middle6 {
+    opacity: 1;
+}
+    .wall:hover .wallPic{
+        opacity: 0.3;
+    }
+
+.text6 {
+  background-color: black;
+  color: white;
+  width: 400px;
+  height: 795px;
+  
+  font-size: 24px;
+  padding: 16px 19px;
+  
+}
+
+
+
+
+
+    @media (max-width: 600px) {
+        .container{
+            display: block;
+        }
+        }
+
+        @media (max-width: 800px) {
+        .container{
+            display: block;
+        }
+        }
+
+    
+
+
+</style>
+
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <div class="container">
+        
+
+            <div class="flex-container1">
+                <div class="long">
+                    <img class="img1" src="img/pic1.png">
+                    <div class="middle">
+                        <p class="text">Sweet, subtle, sympathetic, three-dimensional Jimmy McGill, always expecting the best but experiencing the worst. He's a charming loser, an impatient man prepared to bend the rules if it will help people. Jimmy McGill is a joy to be around. </p>
+                    </div>
+                </div>
+                <div class="short">
+                    <img class="logo" src="img/logo2.png">
+                </div>
+            </div>   
+
+            <div class="flex-container1">
+                <div class="med">
+                    <img class="img3" src="img/landscape (1).png">
+                    <div class="middle2">
+                        <p class="text2">Walter is kind, caring and timid, but also demanding, calculating, and ruthless. His invented pseudonym, Heisenberg, becomes an alter ego – a fantasy for him to live out a love of power. Beneath both sides of his dual personality, he views the world in the rarefied scientific terms of chemistry.</p>
+                    </div>
+                </div>
+                <div class="normal">
+                    <img class="img2" src="img/saulAndWalt.png">
+                    <div class="middle5">
+                        <p class="text5">The ambitious Saul Goodman sees potential in Walt and Jesse - a raw, malleable talent with good product that simply needs guiding through the New Mexico underworld. Against his better judgement, Saul approaches his new client at work and the partnership becomes official. Needless to say, this decision does not serve Saul well.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-container1">
+                <div class="med">
+                        <img class="img3" src="img/landscape (2).png">
+                        <div class="middle3">
+                            <p class="text3">Underneath this outwardly pleasant front, he is ruthless, cruel, and Machiavellian in managing his drug empire, using his anti-drug philanthropy to conceal his true nature from the public. He employs a number of enforcers including Mike Ehrmantraut, and has personally killed both rivals and allies.</p>
+                        </div>
+                </div>
+
+                <div class="med">
+                    <img class="img3" src="img/two-face.png">
+                    <div class="middle4">
+                        <p class="text4">Inbetween these two master minds saul begins to lose his character saul has been played like a toy and this was the last straw</p>
+                    </div>
+                </div>  
+
+                <div class="short">
+                    <!-- <img class="sad" src="img/sadSaul.jpg" alt=""> -->
+                </div>
+            </div>
+            
+            <div class="flex-container1">
+                <div class="wall">
+                    
+                        <img class="wallPic" src="img/pic2.png">
+                        <div class="middle6">
+                        <p class="text6">In 2010, after his association with Walter White's drug empire was revealed to the public, Saul was forced to retire from his law career, going into hiding in Omaha for several months, living as a fugitive under the alias of "Gene Takavic", a manager of a Cinnabon in Omaha.</p>
+                    </div>
+                </div>
+                <div class="short"></div>
+            </div>
+    </div>
+
+</body>
+</html>
